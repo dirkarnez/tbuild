@@ -17,7 +17,9 @@ class TBuild:
 
   def build_an_executable_from_object_files(self, object_files: Path, executable_name: str, additional_command: str):
     self.__run_command([self.__get_g_plus_plus(), "-o", executable_name, object_files, *additional_command.split()])
+
   # def build_a_shared_library():
+  
   # def build_a_static_library():
 
   def __get_g_plus_plus(self) -> Path:
