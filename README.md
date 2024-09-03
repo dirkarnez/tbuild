@@ -1,6 +1,6 @@
 tbuild
 ======
-Transparent Build
+Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
 ### TODOs
 - Builder pattern interface?
