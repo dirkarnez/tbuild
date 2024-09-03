@@ -3,26 +3,47 @@ import subprocess
 from typing import List
 import os
 
+from abc import ABC, abstractmethod
+
+class AccountingSystem(ABC):
+
+    @abstractmethod
+    def create_purchase_invoice(self, purchase):
+        pass
+
+    @abstractmethod
+    def create_sale_invoice(self, sale):
+        log.debug('Creating sale invoice', sale)
+
+class GizmoAccountingSystem(AccountingSystem):
+
+    def create_purchase_invoice(self, purchase):
+        submit_to_gizmo_purchase_service(purchase)
+
+    def create_sale_invoice(self, sale):
+        super().create_sale_invoice(sale)
+        submit_to_gizmo_sale_service(sale)
+      
 class TBuild:
   def __init__(self, location: Path, compiler_prefix: str):
     self.location = location
     self.compiler_prefix = compiler_prefix
-
-  def build_an_object(self, source_file: Path) -> str:
+    
+  def build_an_object(self, compiler: Path, source_file: Path) -> str:
     self.__run_command([self.__get_g_plus_plus(), "-c", source_file])
     return f"{Path(source_file).stem}.o"
 
   # def build_an_executable_from_source_files(self, source_files: String, commands: String) -> bool:
   #   __run_command(__get_gcc())
 
-  def build_an_executable_from_object_files(self, object_files: Path, executable_name: str, additional_command: str):
+  def build_an_executable_from_object_files(self, compiler: Path, object_files: Path, executable_name: str, additional_command: str):
     self.__run_command([self.__get_g_plus_plus(), "-o", executable_name, object_files, *additional_command.split()])
 
   # def build_a_shared_library():
   
   # def build_a_static_library():
 
-  def __get_g_plus_plus(self) -> Path:
+  def get_g_plus_plus(self) -> Path:
     return Path(self.location) / f"{self.compiler_prefix}g++"
 
   def __run_command(self, command: List[str]):
