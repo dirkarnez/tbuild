@@ -2,6 +2,12 @@ tbuild
 ======
 Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
+### Feature
+- [ ] no ENV
+- [ ] no need to do pre-build
+- [ ] p2p
+- [ ] reporting
+
 ### TODOs
 - Builder pattern interface?
 - linker script
