@@ -3,3 +3,4 @@
 /tbuild.egg-info
 *.exe
 *.o
+__pycache__

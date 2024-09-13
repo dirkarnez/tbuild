@@ -1,0 +1,53 @@
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).absolute().parent.parent.parent))
+# import tbuild
+import sys
+
+# setting path
+from tbuild import TBuild
+
+tbuild = TBuild(Path.home() / "Downloads" / "winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1" / "mingw64" / "bin", "aarch64-none-elf-")
+# tbuild = TBuild(Path("D:") / "Softwares" / "winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1" / "mingw64" / "bin", "")
+
+tbuild.build_an_object(
+  tbuild.get_gcc(),
+  "hello_world.c", 
+  "hello_world.o"
+)
+tbuild.build_an_object(
+  tbuild.get_gcc(),
+  "startup.s", 
+  "startup.o"
+)
+
+tbuild.link_an_executable_from_object_files(
+  tbuild.get_linker(),
+  "link_script.ld",
+  ["startup.o", "hello_world.o"],
+  "hello_world.elf"
+)
+
+tbuild.build()
+
+
+
+
+
+print()
+
+
+# https://github.com/dirkarnez/qemu-cortex-a7-baremetal/blob/main/Makefile
+# hello_world.elf: link_script.ld startup.o hello_world.o
+# 	# Link the two object files to an elf file
+# 	$(LD) -T link_script.ld startup.o hello_world.o -o 
+
+# startup.o: startup.s
+# 	$(AS) -o startup.o startup.s
+
+# hello_world.o: hello_world.c
+# 	$(CC) -c -o hello_world.o hello_world.c
+
+# clean:
+# 	rm -f hello_world.o startup.o hello_world.elf
+
