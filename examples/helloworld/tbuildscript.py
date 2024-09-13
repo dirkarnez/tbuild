@@ -25,5 +25,4 @@ tbuild.build_an_executable_from_object_files(
 
 tbuild.build()
 
-
 print()
