@@ -108,10 +108,11 @@ class TBuild(IBuilder):
         for j, file in enumerate(l.expected_output_files):
           if os.path.exists(file):
             os.remove(file)
-          else:
-            self.__run_command([l.tool_executable, *l.commands])
-            good=self.__is_good_run(l.expected_output_files)
-            the_file.write(f"{' '.join([str(l.tool_executable), *l.commands])} ran {'perfectly' if good else 'badly'}\n")
-            if not good:
-              exit(1)
+            the_file.write(f"deleting {file}\n")
+
+          self.__run_command([l.tool_executable, *l.commands])
+          good=self.__is_good_run(l.expected_output_files)
+          the_file.write(f"{' '.join([str(l.tool_executable), *l.commands])} ran {'perfectly' if good else 'badly'}\n")
+          if not good:
+            exit(1)
     print("everything is good")
