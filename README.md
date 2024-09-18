@@ -17,4 +17,6 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - distributed
   - [Quickstart — Dask.distributed 2024.8.2 documentation](https://distributed.dask.org/en/stable/quickstart.html)
 - CICD
+  - testing across example projects
+- CLI argument builder (for QEMU scripts, etc)
 - baremetal
