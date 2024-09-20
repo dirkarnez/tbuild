@@ -2,6 +2,10 @@ tbuild
 ======
 Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
+### Examples
+- [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld)
+- [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal)
+
 ### Feature
 - [ ] no ENV
 - [ ] no need to do pre-build
