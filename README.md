@@ -12,6 +12,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [ ] p2p
 - [ ] reporting
 - [ ] dev-env-setup-as-code (download tools + set up)
+- [ ] additional arguemnt for gcc and linker, for example`-mcpu=cortex-a72 -mlittle-endian -ffreestanding`
 
 ### TODOs
 - [ ] Builder pattern interface?
