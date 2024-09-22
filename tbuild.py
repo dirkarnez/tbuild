@@ -59,7 +59,7 @@ class TBuild(IBuilder):
   # $(AS) -o startup.o startup.s
   def assemble_an_object(self, compiler: Path, source_file: Path, output_object_name: str):
     # f"{Path(source_file).stem}.o"
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-o", output_object_name, source_file], expected_output_files=[output_object_name]))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[source_file, "-o", output_object_name], expected_output_files=[output_object_name]))
 
   # def build_an_executable_from_source_files(self, source_files: String, commands: String) -> bool:
   #   __run_command(__get_gcc())
