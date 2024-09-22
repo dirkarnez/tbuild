@@ -11,6 +11,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [ ] no need to do pre-build
 - [ ] p2p
 - [ ] reporting
+- [ ] dev-env-setup-as-code
 
 ### TODOs
 - Builder pattern interface?
