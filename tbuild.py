@@ -2,6 +2,7 @@ from pathlib import Path
 import subprocess
 from typing import List
 import os
+import sys
 from dataclasses import dataclass
 from abc import ABC, abstractmethod
 
@@ -76,20 +77,23 @@ class TBuild(IBuilder):
   
   # def build_a_static_library():
 
+  def __get_executable_extension_with_dot(self) -> str:
+    return ".exe" if sys.platform.startswith('win32') else ""
+
   def get_linker(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}ld"
+    return Path(self.location) / f"{self.compiler_prefix}ld{self.__get_executable_extension_with_dot()}"
 
   def get_assembler(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}as"
+    return Path(self.location) / f"{self.compiler_prefix}as{self.__get_executable_extension_with_dot()}"
 
   def get_gcc(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}gcc"
+    return Path(self.location) / f"{self.compiler_prefix}gcc{self.__get_executable_extension_with_dot()}"
 
   def get_g_plus_plus(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}g++"
+    return Path(self.location) / f"{self.compiler_prefix}g++{self.__get_executable_extension_with_dot()}"
 
   def __run_command(self, commands: List[str]):
-    print(' '.join([str(elem) for elem in commands]))
+    print(f"{' '.join([str(elem) for elem in commands])}\n")
     # myenv = {**os.environ, 'PATH': os.environ['PATH'] + ";" + self.location }
     subprocess.call(commands) #, env=myenv)
 
@@ -102,17 +106,19 @@ class TBuild(IBuilder):
   def build(self):
     with open('report.txt', 'w') as the_file:
       for i, l in enumerate(self.tasks):
-        # if not os.path.exists(l.tool_executable):
-        #   print(f"{l.tool_executable} not exists")
-        #   exit(1)
+        if not os.path.exists(l.tool_executable):
+          report_line=f"\"{l.tool_executable}\" not exists"
+          print(report_line)
+          the_file.write(report_line)
+          exit(1)
         for j, file in enumerate(l.expected_output_files):
           if os.path.exists(file):
             os.remove(file)
+            print(f"deleting existing {file}\n")
             the_file.write(f"deleting {file}\n")
-
           self.__run_command([l.tool_executable, *l.commands])
           good=self.__is_good_run(l.expected_output_files)
-          the_file.write(f"{' '.join([str(l.tool_executable), *l.commands])} ran {'perfectly' if good else 'badly'}\n")
+          the_file.write(f"\"{' '.join([str(l.tool_executable), *l.commands])}\" ran {'perfectly' if good else 'badly'}\n")
           if not good:
             exit(1)
     print("everything is good")
