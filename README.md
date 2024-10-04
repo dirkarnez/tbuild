@@ -9,6 +9,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 ### Feature
 - [ ] no ENV
 - [ ] no need to do pre-build
+- [ ] file walker to re-build the only objects file you are writing code for
 - [ ] p2p
   - [ymake/ymake/builder.py at main · evilbinary/ymake · GitHub](https://github.com/evilbinary/ymake/blob/main/ymake/builder.py)
 - [ ] reporting
