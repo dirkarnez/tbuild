@@ -10,6 +10,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [ ] no ENV
 - [ ] no need to do pre-build
 - [ ] p2p
+  - [ymake/ymake/builder.py at main · evilbinary/ymake · GitHub](https://github.com/evilbinary/ymake/blob/main/ymake/builder.py)
 - [ ] reporting
 - [ ] dev-env-setup-as-code (download tools + set up)
 - [ ] additional arguemnt for gcc and linker, for example:
