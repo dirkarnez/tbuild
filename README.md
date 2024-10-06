@@ -18,6 +18,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [ ] additional arguemnt for gcc and linker, for example:
   - `-mcpu=cortex-a72 -mlittle-endian -ffreestanding`
   - force `-std=c++20`
+  - [g++ 常用链接参数-CSDN博客](https://blog.csdn.net/yz930618/article/details/94987459)
 
 ### TODOs
 - [ ] Builder pattern interface?
@@ -32,3 +33,5 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
   - testing across example projects
 - [ ] CLI argument builder (for QEMU scripts, etc)
 - [x] baremetal
+- [ ] Shared library `g++ hash.cpp -fPIC -shared -o hash.so`
+- [ ] Static library
