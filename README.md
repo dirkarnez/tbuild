@@ -20,6 +20,9 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
   - force `-std=c++20`
   - [g++ 常用链接参数-CSDN博客](https://blog.csdn.net/yz930618/article/details/94987459)
 
+### Reference
+- [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
+
 ### TODOs
 - [ ] Builder pattern interface?
 - [ ] **Exit code**
