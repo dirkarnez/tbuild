@@ -24,6 +24,14 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
 
 ### TODOs
+- [ ] Get subprocess output
+  ```python
+  try:
+    out_bytes = subprocess.check_output(['cmd','arg1','arg2'])
+  except subprocess.CalledProcessError as e:
+      out_bytes = e.output       # Output generated before error
+      code      = e.returncode   # Return code
+  ```
 - [ ] Builder pattern interface?
 - [ ] **Exit code**
 - [x] linker script
