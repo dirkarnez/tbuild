@@ -5,6 +5,7 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 ### Examples
 - [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld)
 - [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal)
+- [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), TOA
 
 ### Feature
 - [ ] define third party inside `tbuildscript.py` without adding anything to its github repo 
