@@ -66,12 +66,15 @@ class TBuild(IBuilder):
   #   __run_command(__get_gcc())
 
   def build_an_executable_from_object_files(self, compiler: Path, object_files: List[Path], output_executable_name: str, additional_command: str = ""):
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[*[str(object_file) for i, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[*[str(object_file) for _, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
 
   # $(LD) -T link_script.ld startup.o hello_world.o -o hello_world.elf
   def link_an_executable_from_object_files(self, compiler: Path, linker_script_file: Path, object_files: List[Path], output_executable_name: str, additional_command: str = ""):
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-T", str(linker_script_file), *[str(object_file) for i, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-T", str(linker_script_file), *[str(object_file) for _, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
     # linker script
+
+  def build_a_static_library_from_object_files(self, compiler: Path, output_executable_name: str, object_files: List[Path], additional_command: str = ""):
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["rcs", output_executable_name, *[str(object_file) for _, object_file in enumerate(object_files)], *additional_command.split()], expected_output_files=[output_executable_name] ))
 
   # def build_a_shared_library():
   
@@ -85,6 +88,9 @@ class TBuild(IBuilder):
 
   def get_assembler(self) -> Path:
     return Path(self.location) / f"{self.compiler_prefix}as{self.__get_executable_extension_with_dot()}"
+
+  def get_ar(self) -> Path:
+    return Path(self.location) / f"{self.compiler_prefix}ar{self.__get_executable_extension_with_dot()}"
 
   def get_gcc(self) -> Path:
     return Path(self.location) / f"{self.compiler_prefix}gcc{self.__get_executable_extension_with_dot()}"
