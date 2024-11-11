@@ -8,7 +8,8 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), TOA
 
 ### Feature
-- [ ] define third party inside `tbuildscript.py` without adding anything to its github repo 
+- [ ] define third party inside `tbuildscript.py` without adding anything to its github repo
+  - [ ] https://github.com/AndersKaloer/Ring-Buffer
 - [ ] no ENV
 - [ ] no need to do pre-build
 - [ ] file walker to re-build the only objects file you are writing code for
