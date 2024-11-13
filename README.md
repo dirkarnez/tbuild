@@ -43,9 +43,12 @@ Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help buil
 - [ ] build report (list of commands with `is_successful` and `run_on`)
 - [ ] distributed
   - [Quickstart — Dask.distributed 2024.8.2 documentation](https://distributed.dask.org/en/stable/quickstart.html)
-- [ ] CICD
+- [x] CICD
   - testing across example projects
 - [ ] CLI argument builder (for QEMU scripts, etc)
 - [x] baremetal
 - [ ] Shared library `g++ hash.cpp -fPIC -shared -o hash.so`
 - [ ] Static library
+- [ ] Wraps CMake (also to make the install-less targets usable)
+- [ ] Wraps AutoTools
+- [ ] Wraps Bazel
