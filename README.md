@@ -15,7 +15,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] no `$ENV`
 - [ ] no symlink
 - [ ] support code-generation
-- [ ] language agnostic
+- [ ] language agnostic (focus on C and C++ at the moment)
 - [ ] no need to do pre-build (especially third-parties)
 - [ ] file walker to re-build the only objects file you are writing code for
 - [ ] p2p (dask distributed)
