@@ -15,7 +15,8 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] no `$ENV`
 - [ ] no symlink
 - [ ] support code-generation
-- [ ] no need to do pre-build
+- [ ] language agnostic
+- [ ] no need to do pre-build (especially third-parties)
 - [ ] file walker to re-build the only objects file you are writing code for
 - [ ] p2p (dask distributed)
   - [ymake/ymake/builder.py at main · evilbinary/ymake · GitHub](https://github.com/evilbinary/ymake/blob/main/ymake/builder.py)
