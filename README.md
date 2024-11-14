@@ -14,6 +14,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [ ] https://github.com/AndersKaloer/Ring-Buffer
 - [ ] no `$ENV`
 - [ ] no symlink
+- [ ] no more OS shells (*nix, windows, just leverage Python!)
 - [ ] support code-generation
 - [ ] language agnostic (focus on C and C++ at the moment)
 - [ ] no need to do pre-build (especially third-parties)
