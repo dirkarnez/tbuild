@@ -48,33 +48,37 @@ class TBuildTask:
 #         submit_to_gizmo_sale_service(sale)
 
 class TBuild(IBuilder):
-  def __init__(self, location: Path, compiler_prefix: str):
+  build_directory: Path
+
+  def __init__(self, location: Path, compiler_prefix: str, build_directory: Path, installation_directory: Path):
     self.location = location
     self.compiler_prefix = compiler_prefix
+    self.build_directory = Path(build_directory)
+    self.installation_directory = Path(installation_directory)
     self.tasks = []
 
   def build_an_object(self, compiler: Path, source_file: Path, output_object_name: str):
     # f"{Path(source_file).stem}.o"
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-c", source_file, "-o", output_object_name], expected_output_files=[output_object_name]))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-c", source_file, "-o", str(self.build_directory / output_object_name)], expected_output_files=[self.build_directory / output_object_name]))
 
   # $(AS) -o startup.o startup.s
   def assemble_an_object(self, compiler: Path, source_file: Path, output_object_name: str):
     # f"{Path(source_file).stem}.o"
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[source_file, "-o", output_object_name], expected_output_files=[output_object_name]))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[source_file, "-o", str(self.build_directory / output_object_name)], expected_output_files=[self.build_directory / output_object_name]))
 
   # def build_an_executable_from_source_files(self, source_files: String, commands: String) -> bool:
   #   __run_command(__get_gcc())
 
   def build_an_executable_from_object_files(self, compiler: Path, object_files: List[Path], output_executable_name: str, additional_command: str = ""):
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[*[str(object_file) for _, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=[*[str(self.build_directory / object_file) for _, object_file in enumerate(object_files)], "-o", self.build_directory / output_executable_name, *additional_command.split()], expected_output_files=[self.build_directory /output_executable_name] ))
 
   # $(LD) -T link_script.ld startup.o hello_world.o -o hello_world.elf
   def link_an_executable_from_object_files(self, compiler: Path, linker_script_file: Path, object_files: List[Path], output_executable_name: str, additional_command: str = ""):
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-T", str(linker_script_file), *[str(object_file) for _, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[output_executable_name] ))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["-T", str(linker_script_file), *[str(self.build_directory / object_file) for _, object_file in enumerate(object_files)], "-o", output_executable_name, *additional_command.split()], expected_output_files=[self.build_directory / output_executable_name] ))
     # linker script
 
   def build_a_static_library_from_object_files(self, compiler: Path, output_executable_name: str, object_files: List[Path], additional_command: str = ""):
-    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["rcs", output_executable_name, *[str(object_file) for _, object_file in enumerate(object_files)], *additional_command.split()], expected_output_files=[output_executable_name] ))
+    self.tasks.append(TBuildTask(tool_executable=compiler, commands=["rcs", self.build_directory / output_executable_name, *[str(self.build_directory / object_file) for _, object_file in enumerate(object_files)], *additional_command.split()], expected_output_files=[self.build_directory / output_executable_name] ))
 
   # def build_a_shared_library():
   
@@ -111,6 +115,7 @@ class TBuild(IBuilder):
 
   def build(self):
     with open('report.txt', 'w') as the_file:
+      self.build_directory.mkdir(parents=True, exist_ok=True)
       for i, l in enumerate(self.tasks):
         if not os.path.exists(l.tool_executable):
           report_line=f"\"{l.tool_executable}\" not exists"
@@ -124,7 +129,9 @@ class TBuild(IBuilder):
             the_file.write(f"deleting {file}\n")
           self.__run_command([l.tool_executable, *l.commands])
           good=self.__is_good_run(l.expected_output_files)
-          the_file.write(f"\"{' '.join([str(l.tool_executable), *l.commands])}\" ran {'perfectly' if good else 'badly'}\n")
+          the_file.write(f"\"{' '.join([str(l.tool_executable), *[str(command) for _, command in enumerate(l.commands)]])}\" ran {'perfectly' if good else 'badly'}\n")
           if not good:
             exit(1)
     print("everything is good")
+
+
