@@ -19,6 +19,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] language agnostic (focus on C and C++ at the moment)
 - [ ] no need to do pre-build (especially third-parties)
 - [ ] file walker to re-build the only objects file you are writing code for
+  - [ ] build cache
 - [ ] p2p (dask distributed)
   - [ymake/ymake/builder.py at main · evilbinary/ymake · GitHub](https://github.com/evilbinary/ymake/blob/main/ymake/builder.py)
   - [dirkarnez/dask-distributed-playground](https://github.com/dirkarnez/dask-distributed-playground)
