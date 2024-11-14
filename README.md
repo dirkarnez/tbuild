@@ -3,9 +3,11 @@ tbuild
 tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
 ### Examples
-- [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld)
-- [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal)
-- [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), TOA
+- [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld), WIP
+- [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal), WIP
+- [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), WIP
+- [codegen](./examples/codegen), WIP
+- [third-parties-raw](./examples/third-parties-raw), WIP
 
 ### Feature
 - [ ] define third party inside `tbuildscript.py` without adding anything to its github repo
