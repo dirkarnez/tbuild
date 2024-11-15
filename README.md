@@ -33,6 +33,9 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 ### Reference
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
 
+### GCC
+- [c - Running gcc's steps manually, compiling, assembling, linking - Stack Overflow](https://stackoverflow.com/questions/8527743/running-gccs-steps-manually-compiling-assembling-linking)
+
 ### TODOs
 - [ ] Get subprocess output
   ```python
