@@ -7,7 +7,11 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal), WIP
 - [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), WIP
 - [codegen](./examples/codegen), WIP
-- [third-parties-raw](./examples/third-parties-raw), WIP
+- [third-parties-from-git-repo-source-files](./examples/third-parties-from-git-repo), WIP
+  - should include patching
+- [third-parties-from-prebuilt-static-binaries](./examples/third-parties-from-git-repo), WIP
+- [third-parties-from-prebuilt-shared-binaries](./examples/third-parties-from-git-repo), WIP
+- [third-parties-from-cmake-through-adapter](./examples/third-parties-from-git-repo), WIP
 
 ### Feature
 - [ ] define third party inside `tbuildscript.py` without adding anything to its github repo
