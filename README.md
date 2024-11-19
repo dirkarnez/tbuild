@@ -6,6 +6,8 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld), WIP
 - [dirkarnez/tbuild-example-helloworld-mixed-with-nasm](https://github.com/dirkarnez/tbuild-example-helloworld-mixed-with-nasm), WIP
 - [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal), WIP
+  - [ErikOSProject/ErikBoot: ErikBoot is a UEFI-compatible bootloader for ErikOS.](https://github.com/ErikOSProject/ErikBoot)
+  - [ErikOSProject/ErikKernel](https://github.com/ErikOSProject/ErikKernel)
 - [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), WIP
 - [codegen](./examples/codegen), WIP
 - [third-parties-from-git-repo-source-files](./examples/third-parties-from-git-repo), WIP
