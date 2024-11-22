@@ -23,6 +23,8 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] no symlink
 - [ ] no more OS shells (*nix, windows, just leverage Python!)
 - [ ] support code-generation
+      - version number
+      - config.h
 - [ ] language agnostic (focus on C and C++ at the moment)
 - [ ] no need to do pre-build (especially third-parties)
 - [ ] file walker to re-build the only objects file you are writing code for
