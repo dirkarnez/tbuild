@@ -75,3 +75,4 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] Wraps AutoTools
   - [**静态编译OpenSSL并作为CMake第三方库 - 个人文章 - SegmentFault 思否**](https://segmentfault.com/a/1190000016017493)
 - [ ] Wraps Bazel
+- [ ] Use [Poetry](https://python-poetry.org/)?
