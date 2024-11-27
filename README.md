@@ -10,6 +10,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [ErikOSProject/ErikKernel](https://github.com/ErikOSProject/ErikKernel)
 - [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), WIP
 - [codegen](./examples/codegen), WIP
+  - [jdah/archimedes: C++20 reflection via code generation](https://github.com/jdah/archimedes)
 - [third-parties-from-git-repo-source-files](./examples/third-parties-from-git-repo), WIP
   - should include patching
 - [third-parties-from-prebuilt-static-binaries](./examples/third-parties-from-git-repo), WIP
