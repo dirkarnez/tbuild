@@ -49,6 +49,12 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 ### GCC
 - [c - Running gcc's steps manually, compiling, assembling, linking - Stack Overflow](https://stackoverflow.com/questions/8527743/running-gccs-steps-manually-compiling-assembling-linking)
 - [GCC and Make - A Tutorial on how to compile, link and build C/C++ applications](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)
+- [程序编译、链接相关问题（持续更新中......）_程序编译链接的一些常见疑问-CSDN博客](https://blog.csdn.net/whyaiw/article/details/73658194)
+  - > 当对动态库与静态库混合连接的时候，使用-static会导致所有的库都使用静态连接的方式。这时需要作用-Wl的方式：
+    - `gcc test.cpp -L. -Wl,-Bstatic -ltestlib  -Wl,-Bdynamic -ltestdll `
+  - > 另外还要注意系统的运行库使用动态连接的方式，所以当动态库在静态库前面连接时，必须在命令行最后使用动态连接的命令才能正常连接，如：
+    - `gcc test.cpp -L. -Wl,-Bdynamic -ltestdll -Wl,-Bstatic -ltestlib  -Wl,-Bdynamic`
+    - > 最后的-Wl,-Bdynamic表示将缺省库链接模式恢复成动态链接。
 
 ### TODOs
 - [ ] Get subprocess output
