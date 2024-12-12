@@ -48,7 +48,7 @@ class TBuildTask:
 #         submit_to_gizmo_sale_service(sale)
 
 class CodeGenerator(IBuilder):
-    def build（self) -> str:
+    def build(self) -> str:
         return """#ifndef HEATSHRINK_H
         #define HEATSHRINK_H
         
