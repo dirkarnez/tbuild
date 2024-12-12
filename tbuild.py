@@ -73,8 +73,8 @@ class CodeGenerator(IBuilder):
 class TBuild(IBuilder):
   build_directory: Path
 
-  def __init__(self, location: Path, compiler_prefix: str, build_directory: Path, installation_directory: Path):
-    self.location = location
+  def __init__(self, toolchain_location: Path, compiler_prefix: str, build_directory: Path, installation_directory: Path):
+    self.toolchain_location = toolchain_location
     self.compiler_prefix = compiler_prefix
     self.build_directory = Path(build_directory)
     self.installation_directory = Path(installation_directory)
@@ -111,19 +111,19 @@ class TBuild(IBuilder):
     return ".exe" if sys.platform.startswith('win32') else ""
 
   def get_linker(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}ld{self.__get_executable_extension_with_dot()}"
+    return Path(self.toolchain_location) / f"{self.compiler_prefix}ld{self.__get_executable_extension_with_dot()}"
 
   def get_assembler(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}as{self.__get_executable_extension_with_dot()}"
+    return Path(self.toolchain_location) / f"{self.compiler_prefix}as{self.__get_executable_extension_with_dot()}"
 
   def get_ar(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}ar{self.__get_executable_extension_with_dot()}"
+    return Path(self.toolchain_location) / f"{self.compiler_prefix}ar{self.__get_executable_extension_with_dot()}"
 
   def get_gcc(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}gcc{self.__get_executable_extension_with_dot()}"
+    return Path(self.toolchain_location) / f"{self.compiler_prefix}gcc{self.__get_executable_extension_with_dot()}"
 
   def get_g_plus_plus(self) -> Path:
-    return Path(self.location) / f"{self.compiler_prefix}g++{self.__get_executable_extension_with_dot()}"
+    return Path(self.toolchain_location) / f"{self.compiler_prefix}g++{self.__get_executable_extension_with_dot()}"
 
   def __run_command(self, commands: List[str]):
     print(f"{' '.join([str(elem) for elem in commands])}\n")
