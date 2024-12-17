@@ -81,6 +81,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] Shared library `g++ hash.cpp -fPIC -shared -o hash.so`
 - [ ] Static library
 - [ ] Wraps CMake (also to make the install-less targets usable)
+  - [CMakeToolchain — conan 2.0.17 documentation](https://docs.conan.io/2.0/reference/tools/cmake/cmaketoolchain.html) 
 - [ ] Wraps AutoTools
   - [**静态编译OpenSSL并作为CMake第三方库 - 个人文章 - SegmentFault 思否**](https://segmentfault.com/a/1190000016017493)
 - [ ] Wraps Bazel
