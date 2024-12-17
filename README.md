@@ -13,6 +13,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [jdah/archimedes: C++20 reflection via code generation](https://github.com/jdah/archimedes)
   - webidl2
   - device tree parsing
+  - [dawn/generator at main · google/dawn](https://github.com/google/dawn/tree/main/generator)
 - [third-parties-from-git-repo-source-files](./examples/third-parties-from-git-repo), WIP
   - should include patching
 - [third-parties-from-prebuilt-static-binaries](./examples/third-parties-from-git-repo), WIP
