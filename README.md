@@ -26,6 +26,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] no `$ENV`
 - [ ] no symlink
 - [ ] no more OS shells (*nix, windows, just leverage Python!)
+  - [shutil — High-level file operations — Python 3.13.1 documentation](https://docs.python.org/3/library/shutil.html) 
 - [ ] support code-generation
       - version number
       - config.h
