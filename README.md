@@ -28,6 +28,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] no more OS shells (*nix, windows, just leverage Python!)
   - [shutil — High-level file operations — Python 3.13.1 documentation](https://docs.python.org/3/library/shutil.html)
   - [dagster/.buildkite/dagster-buildkite/dagster_buildkite/pipelines at master · dagster-io/dagster](https://github.com/dagster-io/dagster/tree/master/.buildkite/dagster-buildkite/dagster_buildkite)
+  - [API Reference — idf-build-apps documentation](https://docs.espressif.com/projects/idf-build-apps/en/latest/references/api/modules.html)
 - [ ] support code-generation
       - version number
       - config.h
