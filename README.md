@@ -34,6 +34,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] support code-generation
       - version number
       - config.h
+      - [ilanschnell/perfect-hash: Creating minimal perfect hash functions](https://github.com/ilanschnell/perfect-hash/tree/master)
 - [ ] language agnostic (focus on C and C++ at the moment)
 - [ ] no need to do pre-build (especially third-parties)
 - [ ] file walker to re-build the only objects file you are writing code for
