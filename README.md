@@ -27,6 +27,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [ ] https://github.com/AndersKaloer/Ring-Buffer
 - [ ] no `$ENV`
 - [ ] no symlink
+- [ ] https://github.com/adriancooney/taskfile
 - [ ] no more OS shells (*nix, windows, just leverage Python!)
   - [shutil — High-level file operations — Python 3.13.1 documentation](https://docs.python.org/3/library/shutil.html)
   - [dagster/.buildkite/dagster-buildkite/dagster_buildkite/pipelines at master · dagster-io/dagster](https://github.com/dagster-io/dagster/tree/master/.buildkite/dagster-buildkite/dagster_buildkite)
