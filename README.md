@@ -57,6 +57,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [texttheater/produce: Replacement for Make geared towards processing data rather than compiling code](https://github.com/texttheater/produce)
 - [casey/just: 🤖 Just a command runner](https://github.com/casey/just)
 - [andlabs/qo: Another build system for C/C++, I guess? Inspired by 'go build'](https://github.com/andlabs/qo)
+- [xonsh/xonsh: :shell: Python-powered shell. Full-featured and cross-platform.](https://github.com/xonsh/xonsh)
 
 ### GCC
 - [c - Running gcc's steps manually, compiling, assembling, linking - Stack Overflow](https://stackoverflow.com/questions/8527743/running-gccs-steps-manually-compiling-assembling-linking)
