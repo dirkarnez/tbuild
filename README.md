@@ -58,6 +58,26 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [casey/just: 🤖 Just a command runner](https://github.com/casey/just)
 - [andlabs/qo: Another build system for C/C++, I guess? Inspired by 'go build'](https://github.com/andlabs/qo)
 - [xonsh/xonsh: :shell: Python-powered shell. Full-featured and cross-platform.](https://github.com/xonsh/xonsh)
+- **https://github.com/WarkerAnhaltRanger/mixxx/blob/813297b6ddfddbb8a056dde0c6360b3309fc52e5/build/depends.py#L508**
+  - ```python
+    class OpenGL(Dependence):
+    
+        def configure(self, build, conf):
+            if build.platform_is_osx:
+                build.env.AppendUnique(FRAMEWORKS='OpenGL')
+    
+            # Check for OpenGL (it's messy to do it for all three platforms).
+            if (not conf.CheckLib('GL') and
+                    not conf.CheckLib('opengl32') and
+                    not conf.CheckCHeader('OpenGL/gl.h') and
+                    not conf.CheckCHeader('GL/gl.h')):
+                raise Exception('Did not find OpenGL development files')
+    
+            if (not conf.CheckLib('GLU') and
+                    not conf.CheckLib('glu32') and
+                    not conf.CheckCHeader('OpenGL/glu.h')):
+                raise Exception('Did not find GLU development files')
+    ```
 
 ### GCC
 - [c - Running gcc's steps manually, compiling, assembling, linking - Stack Overflow](https://stackoverflow.com/questions/8527743/running-gccs-steps-manually-compiling-assembling-linking)
