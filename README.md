@@ -51,7 +51,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [g++ 常用链接参数-CSDN博客](https://blog.csdn.net/yz930618/article/details/94987459)
 - [ ] improve exec?
   - [pymakeself/pymakeself/installhosts.py at main · gammazero/pymakeself](https://github.com/gammazero/pymakeself/blob/main/pymakeself/installhosts.py)
-
+- [ ] Wrapping makefiles / CMakeLists.txt / autotools ...
 ### Reference
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
 - [texttheater/produce: Replacement for Make geared towards processing data rather than compiling code](https://github.com/texttheater/produce)
