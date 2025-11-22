@@ -3,6 +3,7 @@ tbuild
 tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
 ### Examples
+- [dirkarnez/tbuild-latex](https://github.com/dirkarnez/tbuild-latex)
 - [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld), WIP
 - [dirkarnez/tbuild-example-helloworld-mixed-with-nasm](https://github.com/dirkarnez/tbuild-example-helloworld-mixed-with-nasm), WIP
 - [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal), WIP
@@ -52,6 +53,8 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] improve exec?
   - [pymakeself/pymakeself/installhosts.py at main · gammazero/pymakeself](https://github.com/gammazero/pymakeself/blob/main/pymakeself/installhosts.py)
 - [ ] Wrapping makefiles / CMakeLists.txt / autotools ...
+- [ ] Leverage CICD
+
 ### Reference
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
 - [texttheater/produce: Replacement for Make geared towards processing data rather than compiling code](https://github.com/texttheater/produce)
