@@ -3,7 +3,7 @@ tbuild
 tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to help build C/C++ projects cross-platform.](https://github.com/Clecius/CppMagic)
 
 ### Examples
-- [dirkarnez/tbuild-latex](https://github.com/dirkarnez/tbuild-latex)
+- [dirkarnez/tbuild-tex](https://github.com/dirkarnez/tbuild-tex), WIP
 - [dirkarnez/tbuild-example-helloworld](https://github.com/dirkarnez/tbuild-example-helloworld), WIP
 - [dirkarnez/tbuild-example-helloworld-mixed-with-nasm](https://github.com/dirkarnez/tbuild-example-helloworld-mixed-with-nasm), WIP
 - [dirkarnez/tbuild-example-baremetal](https://github.com/dirkarnez/tbuild-example-baremetal), WIP
