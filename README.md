@@ -57,6 +57,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 
 ### Reference
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
+- [anonymouspc/cppmake: A modern C++ builder based on C++20 Modules.](https://github.com/anonymouspc/cppmake)
 - [texttheater/produce: Replacement for Make geared towards processing data rather than compiling code](https://github.com/texttheater/produce)
 - [casey/just: 🤖 Just a command runner](https://github.com/casey/just)
 - [andlabs/qo: Another build system for C/C++, I guess? Inspired by 'go build'](https://github.com/andlabs/qo)
