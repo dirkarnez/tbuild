@@ -58,6 +58,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 ### Reference
 - [SCons/scons: SCons - a software construction tool](https://github.com/SCons/scons)
 - [kmackay/emk: Build system, written in Python](https://github.com/kmackay/emk)
+- [watchman/build/fbcode_builder/getdeps.py at 61661233a69167369de9a654faff72ed17fb6b0d · facebook/watchman](https://github.com/facebook/watchman/blob/61661233a69167369de9a654faff72ed17fb6b0d/build/fbcode_builder/getdeps.py)
 - [anonymouspc/cppmake: A modern C++ builder based on C++20 Modules.](https://github.com/anonymouspc/cppmake)
 - [texttheater/produce: Replacement for Make geared towards processing data rather than compiling code](https://github.com/texttheater/produce)
 - [crossroads.js/build.js at master · millermedeiros/crossroads.js](https://github.com/millermedeiros/crossroads.js/blob/master/build.js)
