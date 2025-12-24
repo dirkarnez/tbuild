@@ -128,6 +128,7 @@ class TBuild(IBuilder):
   def __run_command(self, commands: List[str]):
     print(f"{' '.join([str(elem) for elem in commands])}\n")
     # myenv = {**os.environ, 'PATH': os.environ['PATH'] + ";" + self.location }
+    # result = subprocess.run( ["bash", "-c", f"cd {project_dir} && npm test"], capture_output=True, text=True )
     subprocess.call(commands) #, env=myenv)
 
   def __is_good_run(self, expected_output_files: List[str]) -> bool:
