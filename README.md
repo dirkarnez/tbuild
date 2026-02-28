@@ -53,6 +53,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [ ] improve exec?
   - [pymakeself/pymakeself/installhosts.py at main · gammazero/pymakeself](https://github.com/gammazero/pymakeself/blob/main/pymakeself/installhosts.py)
 - [ ] Wrapping makefiles / CMakeLists.txt / autotools ...
+  - https://github.com/nsnam/ns-3-dev-git/blob/master/ns3
 - [ ] Leverage CICD
 
 ### Reference
