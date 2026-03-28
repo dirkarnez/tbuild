@@ -66,6 +66,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [casey/just: 🤖 Just a command runner](https://github.com/casey/just)
 - [andlabs/qo: Another build system for C/C++, I guess? Inspired by 'go build'](https://github.com/andlabs/qo)
 - [xonsh/xonsh: :shell: Python-powered shell. Full-featured and cross-platform.](https://github.com/xonsh/xonsh)
+- [pygemstones/pygemstones/system/runner.py at main · paulocoutinhox/pygemstones](https://github.com/paulocoutinhox/pygemstones/blob/main/pygemstones/system/runner.py)
 - **https://github.com/WarkerAnhaltRanger/mixxx/blob/813297b6ddfddbb8a056dde0c6360b3309fc52e5/build/depends.py#L508**
   - ```python
     class OpenGL(Dependence):
