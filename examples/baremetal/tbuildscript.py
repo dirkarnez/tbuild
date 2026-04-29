@@ -1,6 +1,13 @@
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).absolute().parent.parent.parent))
+
+# import sys
+
+# # This is not required if you've installed pycparser into
+# # your site-packages/ with setup.py
+# sys.path.extend([".", ".."])
+
 # import tbuild
 import sys
 
