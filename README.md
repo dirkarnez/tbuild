@@ -22,6 +22,8 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
 - [third-parties-from-cmake-through-adapter](./examples/third-parties-from-git-repo), WIP
 - docker-based build
   - [fnmatch.js/.github/workflows/build.yml at main · dirkarnez/fnmatch.js](https://github.com/dirkarnez/fnmatch.js/blob/main/.github/workflows/build.yml)
+- emscripten
+  - https://github.com/emscripten-core/emscripten/blob/8005679862f485b7e6755d489fc3a3e253fcbd3f/test/test_browser.py#L5498
 
 ### Feature
 - [ ] define third party inside `tbuildscript.py` without adding anything to its github repo
