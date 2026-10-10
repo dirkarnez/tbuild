@@ -10,6 +10,7 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [ErikOSProject/ErikBoot: ErikBoot is a UEFI-compatible bootloader for ErikOS.](https://github.com/ErikOSProject/ErikBoot)
   - [ErikOSProject/ErikKernel](https://github.com/ErikOSProject/ErikKernel)
 - [dirkarnez/tbuild-example-static-library](https://github.com/dirkarnez/tbuild-example-static-library), WIP
+- free-standing `gcc -ffreesstanding -nostdlib -nostartfiles -c blink.c`
 - [codegen](./examples/codegen), WIP
   - [jdah/archimedes: C++20 reflection via code generation](https://github.com/jdah/archimedes)
   - webidl2
@@ -24,6 +25,9 @@ tbuild = Transparent Build. Inspired by [Clecius/CppMagic: A Python 3 script to 
   - [fnmatch.js/.github/workflows/build.yml at main · dirkarnez/fnmatch.js](https://github.com/dirkarnez/fnmatch.js/blob/main/.github/workflows/build.yml)
 - emscripten
   - https://github.com/emscripten-core/emscripten/blob/8005679862f485b7e6755d489fc3a3e253fcbd3f/test/test_browser.py#L5498
+
+### TODOs
+- [ ] thin-code: use decorator to make the `tbuildscript.py` looks like a makefile
 
 ### Feature
 - [ ] define third party inside `tbuildscript.py` without adding anything to its github repo
